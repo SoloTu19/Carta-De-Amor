@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="C:/Users/Alex/Desktop/detalle/imagenes/corazon.png" type="image/png">
+        <title>Carta de Amor</title>
+
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .sobre {
+            width: 300px;
+            height: 200px;
+            background-color: #ffecd1;
+            border: 2px solid #d1a87d;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        .sobre:hover {
+            transform: scale(1.05);
+        }
+
+        .heart-icon {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: heartbeat 1s infinite;
+            position: relative;
+        }
+
+        .heart-icon::before,
+        .heart-icon::after {
+            content: "";
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart-icon::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart-icon::after {
+            left: 25px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1) rotate(-45deg); }
+            50% { transform: scale(1.2) rotate(-45deg); }
+        }
+
+        .carta, .galeria {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .carta h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: #d1a87d;
+        }
+
+        .carta p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .firma {
+            margin-top: 30px;
+            text-align: right;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #d1a87d;
+        }
+
+        .btn-galeria, .btn-regresar {
+            display: block;
+            width: 200px;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            background-color: #d1a87d;
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-galeria:hover, .btn-regresar:hover {
+            background-color: #c09a6b;
+        }
+
+        .galeria img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .todas-fotos {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .todas-fotos img {
+            width: calc(25% - 10px);
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .todas-fotos img:hover {
+            transform: scale(1.05);
+        }
+
+        .corazon {
+            position: fixed;
+            font-size: 20px;
+            color: red;
+            animation: flotar 4s ease-in-out infinite;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        @keyframes flotar {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sobre" id="sobre">
+            <div class="heart-icon"></div>
+        </div>
+
+        <div class="carta" id="carta">
+            <h1>Querida Eva</h1>
+            <p>
+                Quería aprovechar este momento para escribirte algo especial. 
+                Desde que nos conocimos, he sentido algo increíblemente único, 
+                algo que no había experimentado antes. Cada momento que hemos compartido 
+                ha sido una alegría, y cada risa una melodía que resuena en mi corazón.
+            </p>
+            <p>
+                No puedo evitar sentir que el destino nos unió para crear algo maravilloso. 
+                Me inspiras a ser mejor cada día, y me siento afortunado de poder contar 
+                con tu presencia. Tus palabras, tus gestos, todo de ti es especial para mí.
+            </p>
+            <p>
+                Solo quería decirte cuánto significas para mí y cuánto valoro el tiempo 
+                que pasamos juntos. Quisiera seguir creando más recuerdos a tu lado, 
+                riendo, explorando y disfrutando de la vida juntos.
+            </p>
+            <p>
+                No sabes cuanto espere una chica tan hermosa y tan TÚ!!! No quiero perder la oportunidad de 
+                decirte absolutamente todo lo que siento aunque ya lo hice jajaja. 
+                Señora Eva, la más hermosa de toda la tierra; ¿Me aceptarias como tu enamorado?
+                No te prometo una vida que este completamente lleno de color rosa pero si te prometo estar 
+                contigo en las buenas y en las malas. ¿Aceptarias y me darías el placer de ser el dueño de tu corazon?
+                Porfiiii
+            </p>
+            <p class="firma">
+                Con todo mi amor,<br>
+                Alex
+            </p>
+            <button class="btn-galeria" id="btnGaleria">Ver nuestros recuerdos</button>
+        </div>
+
+        <div class="galeria" id="galeria">
+            <img id="foto-actual" src="" alt="Recuerdo">
+            <div class="todas-fotos" id="todas-fotos"></div>
+            <button class="btn-regresar" id="btnRegresar">Regresar a la carta</button>
+        </div>
+    </div>
+
+    <script>
+        const sobre = document.getElementById('sobre');
+        const carta = document.getElementById('carta');
+        const galeria = document.getElementById('galeria');
+        const btnGaleria = document.getElementById('btnGaleria');
+        const btnRegresar = document.getElementById('btnRegresar');
+        const fotoActual = document.getElementById('foto-actual');
+        const todasFotos = document.getElementById('todas-fotos');
+        
+        const fotos = [
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen1.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen2.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen3.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen4.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen5.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen6.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen7.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen8.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen9.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen10.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen11.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen12.jpg",
+            "C:/Users/Alex/Desktop/detalle/imagenes/imagen13.jpg"
+        ];
+
+        let fotoIndex = 0;
+        let intervaloFotos;
+
+        sobre.addEventListener('click', function() {
+            sobre.style.display = 'none';
+            carta.style.display = 'block';
+            crearExplosionCorazones(); // Llamamos a la función para crear la explosión de corazones
+        });
+
+        btnGaleria.addEventListener('click', function() {
+            carta.style.display = 'none';
+            galeria.style.display = 'block';
+            mostrarGaleria();
+        });
+
+        btnRegresar.addEventListener('click', function() {
+            galeria.style.display = 'none';
+            carta.style.display = 'block';
+        });
+
+        function mostrarGaleria() {
+            fotoActual.src = fotos[fotoIndex];
+            intervaloFotos = setInterval(() => {
+                fotoIndex++;
+                if (fotoIndex >= fotos.length) {
+                    clearInterval(intervaloFotos);
+                    mostrarTodasLasFotos();
+                } else {
+                    fotoActual.src = fotos[fotoIndex];
+                }
+            }, 2000);
+        }
+
+        function mostrarTodasLasFotos() {
+            todasFotos.style.display = 'flex';
+            fotos.forEach(foto => {
+                const imgElement = document.createElement('img');
+                imgElement.src = foto;
+                todasFotos.appendChild(imgElement);
+            });
+        }
+
+        function crearExplosionCorazones() {
+            for (let i = 0; i < 30; i++) {
+                const corazon = document.createElement('div');
+                corazon.classList.add('corazon');
+                corazon.textContent = '❤️';
+                document.body.appendChild(corazon);
+
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+
+                corazon.style.left = `${x}px`;
+                corazon.style.top = `${y}px`;
+
+                setTimeout(() => corazon.remove(), 4000); // Remover los corazones después de 4 segundos
+            }
+        }
+    </script>
+</body>
+</html>
